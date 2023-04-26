@@ -1,27 +1,21 @@
-interface Student {
-    firstName: string;
-    lastName: string;
-    age: number;
-    location: string;
-}
 
-const std_three: Student = {firstName: "John",
+const std_one = {firstName: "John",
                           lastName: "Doe",
                           age: 20,
                          location: "Birmingham",
-                        };
+                        }
 
-const std_four: Student = {firstName: "Munib",
+const std_two = {firstName: "Munib",
                         lastName: "Hamza",
                         age: 24,
                        location: "Riyadh",
-                      };
+                      }
 
-const studentList = [std_three, std_four];
+const studentsList = [std_one, std_two];
 
-const table2 = document.getElementById("students");
+const table = document.getElementById("students");
 
-for (const stud of studentList){
+for (const stud of studentsList){
     const row = document.createElement("tr");
     const name = document.createElement("td");
     name.textContent = stud.firstName;
@@ -30,6 +24,6 @@ for (const stud of studentList){
     const loc = document.createElement("td");
     loc.textContent = stud.location;
     row.appendChild(loc);
-    table2.querySelector("tbody").appendChild(row);
+    table.querySelector("tbody").appendChild(row);
 }
 
